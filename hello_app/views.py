@@ -6,6 +6,24 @@ from . import app
 def home():
     return render_template("home.html")
 
+@app.route('/grid/')
+def grid():
+    elements = [
+        'First',
+        'Second',
+        'Third',
+        'Fourth',
+        'Fifth',
+        'Sixth',
+        'Seventh',
+        'Eighth',
+        'Ninth',
+        'Tenth',
+        'Eleventh',
+        'Twelfth'
+    ]
+    return render_template('grid.html', elements=elements * 10)
+
 @app.route("/about/")
 def about():
     return render_template("about.html")
