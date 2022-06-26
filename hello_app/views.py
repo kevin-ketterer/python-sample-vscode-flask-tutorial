@@ -9,7 +9,7 @@ def home():
 @app.route('/grid/')
 def grid():
     elements = [
-        'First',
+        render_template("/clock/clock.html"),
         'Second',
         'Third',
         'Fourth',
@@ -22,7 +22,7 @@ def grid():
         'Eleventh',
         'Twelfth'
     ]
-    return render_template('grid.html', elements=elements * 10)
+    return render_template('grid.html', elements=elements * 1)
 
 @app.route("/about/")
 def about():
@@ -32,8 +32,10 @@ def about():
 def contact():
     return render_template("contact.html")
 
-@app.route("/hello/")
-@app.route("/hello/<name>")
+@app.route("/clock/")
+def clock():
+    return render_template("/clock/clock.html")
+
 def hello_there(name = None):
     return render_template(
         "hello_there.html",
