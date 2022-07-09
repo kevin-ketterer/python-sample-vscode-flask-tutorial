@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>Hello Lakshmi!</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
 </head>
 
@@ -15,7 +15,7 @@
             <div class="columns">
                 {% for column in row %}
                 <div class="column">
-                    <p class="notification is-danger">{{ column }}</p>
+                    <p class="notification is-danger">{% include column %}</p>
                 </div>
                 {% endfor %}
             </div>

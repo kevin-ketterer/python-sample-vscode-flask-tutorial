@@ -9,18 +9,18 @@ def home():
 @app.route('/grid/')
 def grid():
     elements = [
-        render_template("/clock/clock.html"),
-        'Second',
-        'Third',
-        'Fourth',
-        'Fifth',
-        'Sixth',
-        'Seventh',
-        'Eighth',
-        'Ninth',
-        'Tenth',
-        'Eleventh',
-        'Twelfth'
+        '/clock/clockIntro.html',
+        '/clock/clockIntro.html',
+        '/clock/clockIntro.html',
+        '/clock/clockIntro.html',
+        '/clock/clockIntro.html',
+        '/clock/clockIntro.html',
+        '/clock/clockIntro.html',
+        '/clock/clockIntro.html',
+        '/clock/clockIntro.html',
+        '/clock/clockIntro.html',
+        '/clock/clockIntro.html',
+        '/clock/clockIntro.html'
     ]
     return render_template('grid.html', elements=elements * 1)
 
@@ -34,7 +34,7 @@ def contact():
 
 @app.route("/clock/")
 def clock():
-    return render_template("/clock/clock.html")
+    return render_template("/clock/clockIntro.html")
 
 def hello_there(name = None):
     return render_template(
