@@ -9,24 +9,25 @@ def home():
 @app.route('/grid/')
 def grid():
     elements = [
+        '/hub/hubIntro.html',
         '/clock/clockIntro.html',
-        '/clock/clockIntro.html',
-        '/clock/clockIntro.html',
-        '/clock/clockIntro.html',
-        '/clock/clockIntro.html',
-        '/clock/clockIntro.html',
-        '/clock/clockIntro.html',
-        '/clock/clockIntro.html',
-        '/clock/clockIntro.html',
-        '/clock/clockIntro.html',
-        '/clock/clockIntro.html',
-        '/clock/clockIntro.html'
+        '/filler/fillerIntro.html',
+        '/filler/fillerIntro.html',
+        '/filler/fillerIntro.html',
+        '/filler/fillerIntro.html',
+        '/filler/fillerIntro.html',
+        '/filler/fillerIntro.html',
+        '/filler/fillerIntro.html',
     ]
     return render_template('grid.html', elements=elements * 1)
 
 @app.route("/about/")
 def about():
     return render_template("about.html")
+
+@app.route("/time/")
+def time():
+    return render_template("/clock/timeAndTemp.html")
 
 @app.route("/contact/")
 def contact():

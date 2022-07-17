@@ -1,1 +1,15 @@
-<img src="/static/images/rainbow_clock.png" alt="Clock">
+<figure link="{{ url_for('time') }}" onclick="OpenTime(this);">
+    <div class="face top">
+        <p class="myclock" id="s"></p>
+    </div>
+    <div class="face front">
+        <p class="myclock" id="m"></p>
+    </div>
+    <div class="face left">
+        <p class="myclock" id="h"></p>
+    </div>
+</figure>
+<!-- <a href="{{ url_for('time') }}" target="_blank">*</a> -->
+{% block javascript %}
+<script src="{{ url_for('static', filename='scripts/time.js') }}"></script>
+{% endblock %}
